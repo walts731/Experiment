@@ -1,0 +1,87 @@
+body {
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h2 {
+    color: #ebf1f7;
+    margin-top: 20px;
+    text-align: center;
+}
+.navbar {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f2f3f5;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+.navbar-brand {
+    font-weight: bold;
+}
+.navbar-nav .nav-link {
+    color: #495057 !important;
+}
+.navbar-nav .nav-item.dropdown:hover .nav-link {
+    color: #007bff !important;
+}
+.form-inline .form-control {
+    width: 100%;
+    border: 2px solid #007bff;
+    border-radius: 20px;
+}
+.container {
+    padding: 20px;
+}
+
+.btn-success {
+    width: 100%;
+    background-color: #28a745;
+    border: 1px solid #28a745;
+    border-radius: 20px;
+}
+.btn-success:hover {
+    background-color: #218838;
+    border: 1px solid #218838;
+}
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
+}
+/* Adjusted style for the search bar and button */
+.form-inline {
+    display: flex;
+    justify-content: center;
+}
+
+.form-inline .form-control {
+    width: auto;
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+
+.btn-outline-success {
+    border-radius: 20px;
+}
+
+
+
+.navbar-brand img {
+    max-height: 40px; /* Adjust the height as needed */
+    margin-right: 10px;
+}
+
+.navbar-brand span {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.navbar-nav .cart-icon {
+    font-size: 1.5em;
+    margin-right: 5px;
+}
+
+.cart-count {
+    font-size: 0.8em;
+}
