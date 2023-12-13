@@ -35,12 +35,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             exit(); // Add exit to stop script execution after redirection
         } else {
             // Password is incorrect, redirect to login page with an error message
+            echo "<script>alert('Invalid credentials')</script>"; 
             header("Location: login.php?error=invalid_credentials");
             exit(); // Add exit to stop script execution after redirection
         }
     } else {
         
         // User not found, redirect to login page with an error message
+        echo "<script>alert('Invalid credentials')</script>";
         header("Location: login.php?error=invalid_credentials");
         exit(); // Add exit to stop script execution after redirection
     }

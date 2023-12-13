@@ -98,6 +98,18 @@ session_start();
 
         <div class="row mt-4">
             <div class="col-md-6">
+                <h4 class="mb-4">View Customization</h4>
+                <a href="view_customization.php" class="btn btn-info">View Customization</a>
+            </div>
+
+            <div class="col-md-6">
+                <h4 class="mb-4">Insert Customization</h4>
+                <a href="add_customization.php" class="btn btn-success">Insert Customization</a>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-6">
                 <h4 class="mb-4">Manage Orders</h4>
                 <a href="manage_orders.php" class="btn btn-primary">Manage Orders</a>
             </div>
@@ -108,18 +120,10 @@ session_start();
             </div>
         </div>
 
-        <div class="row mt-4">
-            <div class="col-md-6">
-                <h4 class="mb-4">View All Users</h4>
-                <a href="view_users.php" class="btn btn-info">View All Users</a>
-            </div>
-
-            <div class="col-md-6">
-                <h4 class="mb-4">Insert Customization</h4>
-                <a href="add_customization.php" class="btn btn-success">Insert Customization</a>
-            </div>
+        <div class="col-md-12">
+            <h4 class="mb-4">View All Users</h4>
+            <a href="view_users.php" class="btn btn-info">View All Users</a>
         </div>
-
         <a href="../logout.php" class="btn btn-danger mt-4">Logout</a>
     </div>
 

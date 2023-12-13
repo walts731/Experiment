@@ -75,6 +75,13 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <!-- Custom Styles -->
     <link rel="stylesheet" href="userdefinedstyle.css">
+    <style>
+    .custom-image {
+        width: 50%; /* Set a fixed width or percentage as needed */
+        height: auto; /* Maintain aspect ratio */
+    }
+</style>
+
 </head>
 
 <body>
@@ -116,7 +123,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     </div>
 </div>
 
-        <!-- Step 1: Pick your Crust -->
+        <!-- Step 1: Pick your Color -->
         <div class="row">
             <div class="col-lg-6 col-sm-12">
                 <h4 class="display-6">Step 1. Pick your Color</h4>
@@ -130,15 +137,15 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                             while ($step1 = mysqli_fetch_assoc($get_result)) {
                                 ?>
                                 <div class="col-6">
+                                <img src="admin/custom_images/<?php echo $step1['custom_img']; ?>" alt="" class="img-fluid custom-image">
                                     <input type="radio" class="btn-check" name="step1"
                                         value="<?php echo $step1['custom_id']; ?>" id="<?php echo $step1['custom_id']; ?>"
                                         autocomplete="off">
                                     <label class="btn col-12 btn-outline-danger mb-1"
                                         for="<?php echo $step1['custom_id']; ?>">
                                         <?php echo $step1['custom_name'] . "<br>"; ?>
-                                        <?php echo "Php " . number_format($step1['price_amt'], 2); ?>
-                                        <img src="../img/<?php echo $step1['custom_img']; ?>" alt=""
-                                            class="img-fluid">
+                                       
+                                        
                                     </label>
                                 </div>
                             <?php
@@ -162,6 +169,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                             while ($size = mysqli_fetch_assoc($get_sizes_result)) {
                                 ?>
                                 <div class="col-6">
+                                <img src="admin/custom_images/<?php echo $size['custom_img']; ?>" alt="" class="img-fluid custom-image">
+
                                     <input required type="radio" class="btn-check" name="step2"
                                         value="<?php echo $size['custom_id']; ?>" id="<?php echo $size['custom_id']; ?>"
                                         autocomplete="off">
@@ -191,6 +200,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                             while ($design = mysqli_fetch_assoc($get_designs_result)) {
                                 ?>
                                 <div class="col-6">
+                                <img src="admin/custom_images/<?php echo $design['custom_img']; ?>" alt="" class="img-fluid custom-image">
                                     <input type="radio" class="btn-check" name="step3"
                                         value="<?php echo $design['custom_id']; ?>" id="<?php echo $design['custom_id']; ?>"
                                         autocomplete="off">
@@ -220,6 +230,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                             while ($addon = mysqli_fetch_assoc($get_addons_result)) {
                                 ?>
                                 <div class="col-6">
+                                <img src="admin/custom_images/<?php echo $addon['custom_img']; ?>" alt="" class="img-fluid custom-image">
                                     <input type="checkbox" class="btn-check" name="step4[]"
                                         value="<?php echo $addon['custom_id']; ?>" id="<?php echo $addon['custom_id']; ?>"
                                         autocomplete="off">
@@ -236,16 +247,14 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                 </div>
             </div>
 
-<!-- ... (remaining code) ... -->
 
-        <!-- Order Form -->
     </form>
 
     <footer class="bg-info">
         <p>&copy; <?php echo date("Y"); ?> CRE8. All rights reserved.</p>
     </footer>
 
-    <!-- ... (remaining code) ... -->
+    
 <!-- Include Bootstrap JS and Popper.js (required for Bootstrap dropdowns) -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
