@@ -28,6 +28,15 @@
             text-align: center;
             padding: 10px 0; /* Add padding for better appearance */
         }
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
     </style>
 </head>
 <body class="bg-secondary">
@@ -50,6 +59,12 @@
     </header>
 
     <div class="container mt-4 text-light">
+    
+
+<section>
+    <button class="center">Shop Now</button>
+</section>
+
         <section>
             <h2>About Us</h2>
             <p>
